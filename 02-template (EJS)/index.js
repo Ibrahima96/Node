@@ -1,5 +1,5 @@
 const express = require("express");
-const { get } = require("http");
+
 const app = express();
 const port = 3000;
 
