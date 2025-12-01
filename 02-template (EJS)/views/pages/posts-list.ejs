@@ -1,0 +1,13 @@
+ <%- include('../templates/header') %>
+<h1>La litste des Article</h1>
+
+<% posts.map(post => { %>
+ <h2>
+    <%= post.title %>
+</h2>
+<p>
+    <%= post.category %>
+</p>
+<% }) %>
+
+ <%- include('../templates/footer') %>
