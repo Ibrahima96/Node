@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Todo</title>
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold underline text-center m-9">Todo</h1>
+
+    <main class="max-w-6xl mx-auto px-4">
+      <form
+        action="/task"
+        method="post"
+        class="flex justify-center gap-5 mb-8 w-full"
+      >
+        <input
+          type="text"
+          class="input w-full outline-none"
+          name="task"
+          autofocus
+        />
+        <button class="btn text-white bg-blue-400 hover:bg-blue-600">
+          créé
+        </button>
+      </form>
+      <ul class="text-center space-y-4">
+        <% tasks.forEach((task,idx )=> { %>
+         <% if (task.done) { %>
+         <li class="mb-3">
+          <s><%= task.title %> </s>|
+          <a href="/task/<%=idx%>/delete" >Supprimer</a>
+         </li>
+          <% } else { %>
+            <%= task.title %> |
+          <a href="/task/<%=idx%>/done"> Termine</a>
+          <% } %>
+        <% }) %>
+      </ul>
+    </main>
+  </body>
+</html>

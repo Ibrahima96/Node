@@ -4,15 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.17",
     "ejs": "^3.1.10",
-    "express": "^5.2.1",
-    "tailwindcss": "^4.1.17"
+    "express": "^5.2.1"
   }
 }
